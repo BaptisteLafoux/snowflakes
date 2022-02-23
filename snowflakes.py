@@ -163,14 +163,15 @@ def main():
         if alpha == alphas[-1] : ax.set_xlabel(fr'$\beta$ = {beta:.2f}', color='w')
     
     plt.tight_layout()
+    fig.savefig('outputs/grid.png', dpi=200)
     
 if __name__ == '__main__':
     plt.close('all')
-    #main()
+    main()
     alpha = np.random.rand() * 1.5 + 0.6
     beta  = np.random.rand() * 0.3 + 0.55
     gamma = np.random.rand() * 0.005
 
     #video_growth_sf(alpha, beta, gamma)
-    generate_a_gif(alpha, beta, gamma)
+    #generate_a_gif(alpha, beta, gamma)
 
